@@ -35,7 +35,8 @@ class PrintedBook(Book):
 
 
 class EBook(Book):
-    def __init__(self, title, author, year, file_size, book_format, available=True):
+    def __init__(self, title, author, year, file_size,
+                 book_format, available=True):
         super().__init__(title, author, year, available)
         self.file_size = file_size
         self.book_format = book_format
@@ -171,7 +172,8 @@ library = Library()
 
 book1 = PrintedBook("Война и мир", "Толстой", 1869, 1225, "хорошая")
 book2 = EBook("Мастер и Маргарита", "Булгаков", 1966, 5, "epub")
-book3 = PrintedBook("Преступление и наказание", "Достоевский", 1866, 480, "плохая")
+book3 = PrintedBook("Преступление и наказание", "Достоевский",
+                    1866, 480, "плохая")
 
 user_anna = User("Анна")
 librarian = Librarian("Мария")
